@@ -1,42 +1,21 @@
-﻿Console.WriteLine("Введите имя");
+﻿Console.Write("Введите имя: ");
 string name = Console.ReadLine();
 
 int length = name.Length;
 Console.WriteLine("Длина строки: " + length);
 
-Console.WriteLine("Введите символ");
+Console.Write("Введите символ: ");
 char symbol = char.Parse(Console.ReadLine());
 
-Console.WriteLine("Введите ширину");
-int width = int.Parse(Console.ReadLine());
+int width = name.Length + 4;
 
-Console.WriteLine("Введите высоту");
-int height = int.Parse(Console.ReadLine());
+string symbolWidth = "";
 
-int offset = 2;
-
-for (int i = 0; i < height; i++)
+for (int i = 0; i < width; i += 1)
 {
-	for (int j = 0; j < width; j++)
-	{
-		if (i == 0 || i == height - 1)
-		{
-            Console.Write(symbol);
-        }
-		else if (j == 0 || j == width - 1)
-		{
-            Console.Write(symbol);
-        }
-		else if (i == height / offset && j == (width - length) / offset)
-		{
-			Console.Write(name);
-			j += length - 1;
-		}
-		else
-		{
-			Console.Write(" ");
-		}
-	}
-
-	Console.WriteLine();
+    symbolWidth += symbol;
 }
+
+Console.WriteLine(symbolWidth);
+Console.WriteLine($"{symbol} {name} {symbol}");
+Console.WriteLine(symbolWidth);
