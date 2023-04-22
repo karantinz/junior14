@@ -13,6 +13,8 @@ int width = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите высоту");
 int height = int.Parse(Console.ReadLine());
 
+int offset = 2;
+
 for (int i = 0; i < height; i++)
 {
 	for (int j = 0; j < width; j++)
@@ -25,7 +27,7 @@ for (int i = 0; i < height; i++)
 		{
             Console.Write(symbol);
         }
-		else if (i == height / 2 && j == (width - length) / 2)
+		else if (i == height / offset && j == (width - length) / offset)
 		{
 			Console.Write(name);
 			j += length - 1;
@@ -35,5 +37,6 @@ for (int i = 0; i < height; i++)
 			Console.Write(" ");
 		}
 	}
+
 	Console.WriteLine();
 }
