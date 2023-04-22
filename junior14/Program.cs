@@ -11,7 +11,7 @@ int width = name.Length + 4;
 
 string symbolWidth = "";
 
-for (int i = 0; i < width; i += 1)
+for (int i = 0; i < width; i++)
 {
     symbolWidth += symbol;
 }
